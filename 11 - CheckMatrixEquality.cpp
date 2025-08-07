@@ -26,15 +26,19 @@ void PrintMatrix(int arr[3][3], short Rows, short Cols) {
     }
 }
 
-bool CheckMatricesEquality(int arr1[3][3], int arr2[3][3], short Rows, short Cols) {
+int GetSumOfMatrix(int arr[3][3], short Rows, short Cols) {
+    int sum = 0;
     for (int i = 0; i < Rows; i++) {
         for (int j = 0; j < Cols; j++) {
-            if (arr1[i][j] != arr2[i][j]) {
-                return false;
-            }
+            sum += arr[i][j];
         }
     }
-    return true;
+    return sum;
+}
+
+
+bool CheckMatricesEquality(int arr1[3][3], int arr2[3][3], short Rows, short Cols) {
+    return GetSumOfMatrix(arr1, Rows, Cols) == GetSumOfMatrix(arr2, Rows, Cols);
 }
 
 
