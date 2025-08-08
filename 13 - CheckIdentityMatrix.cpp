@@ -30,7 +30,6 @@ bool IsIdentityMatrix(int Matrix[3][3], short Rows, short Cols) {
 
 int main()
 {
-    srand((unsigned)time(NULL));
     int Matrix[3][3] = { {1,0,0}, {0,1,0}, {0,0,1} };
 
     cout << "\nMatrix : \n";
