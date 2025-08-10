@@ -13,7 +13,7 @@ string ReadString() {
 int CountCapitalLetters(string MyString) {
 	int CapitalLetters = 0;
 	for (int i = 0; i < MyString.size(); i++) {
-		if ((isupper(MyString[i]))) {
+		if (isupper(MyString[i]) && MyString[i] != ' ') {
 			CapitalLetters++;
 		}
 	}
@@ -23,7 +23,7 @@ int CountCapitalLetters(string MyString) {
 int CountSmallLetters(string MyString) {
 	int SmallLetters = 0;
 	for (int i = 0; i < MyString.size(); i++) {
-		if (!(isupper(MyString[i]))) {
+		if (!(isupper(MyString[i])) && MyString[i] != ' ') {
 			SmallLetters++;
 		}
 	}
